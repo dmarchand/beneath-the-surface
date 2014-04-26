@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: Director
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.21185255, y: .250704408, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82cdec1b4628640fe8124ed50fd038e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameSpeed: 7
+  chunkPrefabs:
+  - {fileID: 100000, guid: 16bea5619ee804a388d9838972c9ea90, type: 2}
+  - {fileID: 100000, guid: 19df7988713b449988d4d4d2277c93ad, type: 2}
+  - {fileID: 100000, guid: 35d6f1fa18d8546e699aba3c882a61e3, type: 2}
+  - {fileID: 100040, guid: eaec7492c54be4e0baef6b1b9e0a3b39, type: 2}
+  - {fileID: 100040, guid: f53ccf36a2b914751867e589ce33361f, type: 2}
+  - {fileID: 100040, guid: 5e0b5d37af045401cb2f4a082012bb24, type: 2}
+  - {fileID: 100000, guid: e01f1d7a500b140068063410df9b01ae, type: 2}
+  - {fileID: 100002, guid: 76c08645d9df941c0b75a869d8021af5, type: 2}
+  - {fileID: 100002, guid: 2d65f4e8a1e3a43178dae18c8bc40a7b, type: 2}
+  - {fileID: 100002, guid: f2d28be25a96d4829b150896bd6edff3, type: 2}
+  - {fileID: 100002, guid: 632c912bffcb941779562471012f1b7e, type: 2}
+  - {fileID: 100004, guid: b94009d091dea405989bf88bae039989, type: 2}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

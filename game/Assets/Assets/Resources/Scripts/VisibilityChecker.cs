@@ -23,7 +23,7 @@ public class VisibilityChecker : MonoBehaviour {
 			_spawned = true;
 		}
 
-		if(transform.position.x <= 0 - ChunkWidth - 20) {
+		if(transform.position.x <= 0 - ChunkWidth - 5000) {
 			Destroy(this.gameObject);
 		}
 	}

@@ -9,6 +9,8 @@ public class Director : MonoBehaviour {
 	GUIText _scoreGUI;
 	public GameObject[] chunkPrefabs;
 	int _score = 0;
+	float _distanceTraveled = 0;
+	float _distanceToScore = 100;
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +30,18 @@ public class Director : MonoBehaviour {
 			results[i].GetComponent<VisibilityChecker>().Move(updateSpeed);
 		}
 
+		_distanceTraveled += updateSpeed;
+		if(_distanceTraveled >= _distanceToScore)
+		{
+			print("score ++");
+			_score++;
+			_distanceTraveled = 0;
+
+			if(_score % 10 == 0)
+			{
+				GameSpeed++;
+			}
+		}
 	}
 
 	public void SpawnSegment() {
@@ -36,5 +50,10 @@ public class Director : MonoBehaviour {
 		result.transform.position = new Vector2(12.8f, 0);
 		_score++;
 		_scoreGUI.text = "Score: " + _score;
+
+		if(_score % 10 == 0)
+		{
+			GameSpeed++;
+		}
 	}
 }
