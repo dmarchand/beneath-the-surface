@@ -6,7 +6,7 @@ public class Director : MonoBehaviour {
 	public float GameSpeed;
 
 	GameObject _player, _reflectedPlayer;
-	GUIText _scoreGUI, _levelGUI;
+	GUIText _scoreGUI, _levelGUI, _highScoreGUI;
 	public GameObject[] chunkPrefabs;
 	public GameObject[] giftPrefabs;
 	bool _spawnGift = false;
@@ -20,7 +20,11 @@ public class Director : MonoBehaviour {
 		_player = GameObject.Find("NormalPlayer");
 		_reflectedPlayer = GameObject.Find ("ReflectedPlayer");
 		_scoreGUI = GameObject.Find("ScoreGUI").GetComponent<GUIText>();
-		_levelGUI = GameObject.Find("LevelGUI").GetComponent<GUIText>();
+        _levelGUI = GameObject.Find("LevelGUI").GetComponent<GUIText>();
+        _highScoreGUI = GameObject.Find("HighScoreGUI").GetComponent<GUIText>();
+
+        _highScoreGUI.text = "High Score: " + GameStats.HighScore;
+        GameStats.Score = 0;
 	}
 	
 	// Update is called once per frame
@@ -39,6 +43,7 @@ public class Director : MonoBehaviour {
 		{
 			//print("score ++");
 			_score++;
+            GameStats.Score = _score;
 			_distanceTraveled = 0;
 			_scoreGUI.text = "Score: " + _score;
 
@@ -46,6 +51,11 @@ public class Director : MonoBehaviour {
 			{
 				SpeedUp ();
 			}
+
+            if (_score > GameStats.HighScore)
+            {
+                _highScoreGUI.text = "High Score: " + _score;
+            }
 		}
 	}
 
@@ -76,4 +86,13 @@ public class Director : MonoBehaviour {
 		_level++;
 		_levelGUI.text = "Level: " + _level;
 	}
+
+
+    public static class GameStats
+    {
+
+        public static int Score;
+        public static string DeathText;
+        public static int HighScore;
+    }
 }

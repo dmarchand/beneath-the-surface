@@ -51,3 +51,5 @@ EditorBuildSettings:
     path: Assets/Assets/Resources/Scenes/Gameplay.unity
   - enabled: 1
     path: Assets/Assets/Resources/Scenes/GameOver.unity
+  - enabled: 1
+    path: Assets/Assets/Resources/Scenes/StartScene.unity
