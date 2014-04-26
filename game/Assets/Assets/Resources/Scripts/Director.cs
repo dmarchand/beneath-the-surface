@@ -10,7 +10,7 @@ public class Director : MonoBehaviour {
 	public GameObject[] chunkPrefabs;
 	int _score = 0;
 	float _distanceTraveled = 0;
-	float _distanceToScore = 100;
+	float _distanceToScore = 30;
 
 	// Use this for initialization
 	void Start () {
@@ -37,9 +37,9 @@ public class Director : MonoBehaviour {
 			_score++;
 			_distanceTraveled = 0;
 
-			if(_score % 10 == 0)
+			if(_score % 8 == 0)
 			{
-				GameSpeed++;
+				SpeedUp ();
 			}
 		}
 	}
@@ -48,12 +48,17 @@ public class Director : MonoBehaviour {
 		int index = Random.Range(0, chunkPrefabs.Length);
 		GameObject result = (GameObject)Instantiate(chunkPrefabs[index]);
 		result.transform.position = new Vector2(12.8f, 0);
-		_score++;
+
 		_scoreGUI.text = "Score: " + _score;
 
-		if(_score % 10 == 0)
-		{
-			GameSpeed++;
-		}
+
+	}
+
+	void SpeedUp() {
+		print ("Speed up!");
+		GameSpeed++;
+		_player.GetComponent<PlatformerCharacter2D>().maxSpeed++;
+		_reflectedPlayer.GetComponent<PlatformerCharacter2D>().maxSpeed++;
+		print ("Speed is now: " + GameSpeed);
 	}
 }

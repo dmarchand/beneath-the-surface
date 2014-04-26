@@ -455,9 +455,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   facingRight: 0
   maxSpeed: 10
-  jumpForce: -800
-  extraJumpForce: -200
-  maxJumpForce: -800
+  jumpForce: -10
+  extraJumpForce: -40
+  maxJumpForce: -400
   crouchSpeed: .25
   airControl: 1
   whatIsGround:
@@ -1845,9 +1845,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   facingRight: 1
   maxSpeed: 10
-  jumpForce: 800
-  extraJumpForce: 200
-  maxJumpForce: 800
+  jumpForce: 10
+  extraJumpForce: 40
+  maxJumpForce: 400
   crouchSpeed: .25
   airControl: 1
   whatIsGround:

@@ -4,7 +4,7 @@ public class PlatformerCharacter2D : MonoBehaviour
 {
 	public bool facingRight = true;							// For determining which way the player is currently facing.
 
-	[SerializeField] float maxSpeed = 10f;				// The fastest the player can travel in the x axis.
+	[SerializeField] public float maxSpeed = 10f;				// The fastest the player can travel in the x axis.
 	[SerializeField] float jumpForce = 200f;			// Amount of force added when the player jumps.	
 	[SerializeField] float extraJumpForce = 50f;
 	[SerializeField] float maxJumpForce = 400f;
@@ -113,7 +113,7 @@ public class PlatformerCharacter2D : MonoBehaviour
 			//rigidbody2D.
 			//rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, 100f);
 			currentJumpForce += jumpForce;
-			print ("Added " + jumpForce + ". Current force is " + currentJumpForce);
+			//print ("Added " + jumpForce + ". Current force is " + currentJumpForce);
         }
 
 		if (!grounded && jumpHeld && Mathf.Abs(currentJumpForce) < Mathf.Abs(maxJumpForce)) {
@@ -131,7 +131,7 @@ public class PlatformerCharacter2D : MonoBehaviour
 			}
 
 			rigidbody2D.AddForce(new Vector2(0f, forceToAdd), ForceMode.Acceleration);
-			print ("Added " + forceToAdd + ". Current force is " + currentJumpForce);
+			//print ("Added " + forceToAdd + ". Current force is " + currentJumpForce);
 			currentJumpForce += forceToAdd;
 		}
 
