@@ -31,8 +31,10 @@ public class Swapper : MonoBehaviour {
 		Vector2 basePlayerPos = player.transform.position;
 		Vector2 otherPlayerPos = otherPlayer.transform.position;
 
-		otherPlayer.transform.position = new Vector2(basePlayerPos.x, otherPlayerPos.y);
-		player.transform.position = new Vector2(otherPlayerPos.x, basePlayerPos.y);
+		otherPlayer.transform.position = new Vector2(basePlayerPos.x, 0 - basePlayerPos.y);
+		player.transform.position = new Vector2(otherPlayerPos.x, 0 - otherPlayerPos.y);
+
+
 
 		Destroy(this.gameObject);
 	}

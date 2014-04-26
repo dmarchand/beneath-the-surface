@@ -52,6 +52,19 @@ MonoBehaviour:
   - {fileID: 100002, guid: f2d28be25a96d4829b150896bd6edff3, type: 2}
   - {fileID: 100002, guid: 632c912bffcb941779562471012f1b7e, type: 2}
   - {fileID: 100004, guid: b94009d091dea405989bf88bae039989, type: 2}
+  - {fileID: 100082, guid: c83abd0a91f0c42dfb038e8eab05e396, type: 2}
+  - {fileID: 100082, guid: bbc74eaec8b994979913b7cd7f1299d7, type: 2}
+  - {fileID: 100086, guid: 2cab51eeb5c1945f4adc075d57b5c898, type: 2}
+  - {fileID: 100086, guid: 4b46d0f0d02e4462488a7b0a8a2389df, type: 2}
+  - {fileID: 100002, guid: b117e289069124b46b6e5d7635229a64, type: 2}
+  - {fileID: 100004, guid: 5b3acb1cb06cb4866ac4fc388a11c5ae, type: 2}
+  - {fileID: 100002, guid: 97a8f42e307ec4e96884c996de4e04f8, type: 2}
+  - {fileID: 100000, guid: c1ee7e839399c42318f4caf7036a0e23, type: 2}
+  - {fileID: 100000, guid: 02c1318e9514745d6abcb52d312f0b23, type: 2}
+  - {fileID: 100016, guid: 8d3b105131eb94090b1c61f0023e4af4, type: 2}
+  giftPrefabs:
+  - {fileID: 100032, guid: 7ea45f197eef04df2a0a85bae50e73df, type: 2}
+  - {fileID: 100032, guid: 63e8fc6ede9e4497cb8a66da417f3a44, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

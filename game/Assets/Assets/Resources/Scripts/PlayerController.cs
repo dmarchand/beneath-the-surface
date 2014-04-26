@@ -15,19 +15,19 @@ public class PlayerController : MonoBehaviour {
 		if(IsReflected && this.transform.position.y > 30)
 		{
 			print ("Reflected char fell");
-			Application.LoadLevel(0);
+			Application.LoadLevel(1);
 		}
 
 		if(!IsReflected && this.transform.position.y < -30)
 		{
 			print ("Regular char fell");
-			Application.LoadLevel(0);
+			Application.LoadLevel(1);
 		}
 
 		if(this.transform.position.x < -15)
 		{
 			print ("Fell behind");
-			Application.LoadLevel(0);
+			Application.LoadLevel(1);
 		}
 	}
 
@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour {
 		if(coll.gameObject.GetComponent<PlayerController>() != null)
 		{
 			print ("Hit other player");
-			Application.LoadLevel(0);
+			Application.LoadLevel(1);
 		}
 	}
 }

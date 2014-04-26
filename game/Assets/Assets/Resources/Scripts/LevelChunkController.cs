@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class VisibilityChecker : MonoBehaviour {
+public class LevelChunkController : MonoBehaviour {
 
 	Director _director;
 
