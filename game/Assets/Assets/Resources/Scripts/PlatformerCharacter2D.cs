@@ -20,6 +20,8 @@ public class PlatformerCharacter2D : MonoBehaviour
 	float ceilingRadius = .01f;							// Radius of the overlap circle to determine if the player can stand up
 	Animator anim;										// Reference to the player's animator component.
 
+	bool isParalyzed = false;
+	float paralyzeTimeRemaining = 0f;
 
     void Awake()
 	{
@@ -38,12 +40,27 @@ public class PlatformerCharacter2D : MonoBehaviour
 
 		// Set the vertical animation
 		anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
+
+		if(isParalyzed)
+		{
+			paralyzeTimeRemaining -= Time.fixedDeltaTime;
+
+			if(paralyzeTimeRemaining <= 0)
+			{
+				isParalyzed = false;
+				this.GetComponent<SpriteRenderer>().color = Color.white;
+			}
+		}
 	}
 
 
 	public void Move(float move, bool crouch, bool jump)
 	{
 
+		if(isParalyzed)
+		{
+			return;
+		}
 
 		// If crouching, check to see if the character can stand up
 		if(!crouch && anim.GetBool("Crouch"))
@@ -96,5 +113,14 @@ public class PlatformerCharacter2D : MonoBehaviour
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+
+	public void Paralyze(float duration) 
+	{
+		isParalyzed = true;
+		paralyzeTimeRemaining = duration;
+		rigidbody2D.velocity = new Vector2(0, rigidbody2D.velocity.y);
+		this.GetComponent<SpriteRenderer>().color = Color.yellow;
+		anim.SetFloat("Speed", 0f);
 	}
 }

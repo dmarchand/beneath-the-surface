@@ -27,6 +27,7 @@ public class Director : MonoBehaviour {
 			results[i].transform.position = new Vector2(results[i].transform.position.x - updateSpeed, results[i].transform.position.y);
 			results[i].GetComponent<VisibilityChecker>().Move(updateSpeed);
 		}
+
 	}
 
 	public void SpawnSegment() {
