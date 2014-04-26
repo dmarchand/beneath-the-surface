@@ -16,21 +16,21 @@ public class PlayerController : MonoBehaviour {
 		{
 			print ("Reflected char fell");
             Director.GameStats.DeathText = "Your drone exited the bounds of the dimensional anomaly!";
-			Application.LoadLevel(1);
+			Application.LoadLevel(2);
 		}
 
 		if(!IsReflected && this.transform.position.y < -30)
 		{
 			print ("Regular char fell");
             Director.GameStats.DeathText = "Your drone exited the bounds of the dimensional anomaly!";
-			Application.LoadLevel(1);
+			Application.LoadLevel(2);
 		}
 
 		if(this.transform.position.x < -15)
 		{
 			print ("Fell behind");
             Director.GameStats.DeathText = "Your drone exited the bounds of the dimensional anomaly!";
-			Application.LoadLevel(1);
+			Application.LoadLevel(2);
 		}
 	}
 
@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour {
 		{
 			print ("Hit other player");
             Director.GameStats.DeathText = "Your drones collided, violating the dimensional anomaly's physical laws\n and caused it to collapse!";
-			Application.LoadLevel(1);
+			Application.LoadLevel(2);
 		}
 	}
 }

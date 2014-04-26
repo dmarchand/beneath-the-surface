@@ -34,7 +34,7 @@ public class GameOverController : MonoBehaviour {
 	void Update () {
 	    if (Input.anyKeyDown)
         {
-            Application.LoadLevel(0);
+            Application.LoadLevel(1);
         }
 	}
 }

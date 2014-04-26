@@ -14,6 +14,7 @@ public class Director : MonoBehaviour {
 	float _distanceTraveled = 0;
 	float _distanceToScore = 30;
 	int _level = 1;
+    bool _gamePaused = true;
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +26,8 @@ public class Director : MonoBehaviour {
 
         _highScoreGUI.text = "High Score: " + GameStats.HighScore;
         GameStats.Score = 0;
+
+
 	}
 	
 	// Update is called once per frame
