@@ -1518,8 +1518,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2062790528}
-  - 212: {fileID: 2062790527}
   - 114: {fileID: 2062790529}
+  - 212: {fileID: 2062790527}
   m_Layer: 0
   m_Name: block32
   m_TagString: Untagged
@@ -1548,7 +1548,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: d821e80580c2d4b399962bb63c61b265, type: 3}
+  m_Sprite: {fileID: 21300038, guid: 689535a3742bb9642a210834ff8ed876, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &2062790528
 Transform:

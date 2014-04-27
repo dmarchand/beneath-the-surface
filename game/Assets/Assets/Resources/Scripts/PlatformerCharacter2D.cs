@@ -25,6 +25,7 @@ public class PlatformerCharacter2D : MonoBehaviour
 
 	bool isParalyzed = false;
 	float paralyzeTimeRemaining = 0f;
+    AudioSource jumpAudio;
 
     void Awake()
 	{
@@ -32,6 +33,7 @@ public class PlatformerCharacter2D : MonoBehaviour
 		groundCheck = transform.Find("GroundCheck");
 		ceilingCheck = transform.Find("CeilingCheck");
 		anim = GetComponent<Animator>();
+        jumpAudio = GameObject.Find("Jump").GetComponent<AudioSource>();
 	}
 
 
@@ -115,13 +117,14 @@ public class PlatformerCharacter2D : MonoBehaviour
 			//rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, 100f);
 			currentJumpForce += jumpForce;
 			//print ("Added " + jumpForce + ". Current force is " + currentJumpForce);
+            jumpAudio.Play();
         }
 
 		if (!grounded && jumpHeld && Mathf.Abs(currentJumpForce) < Mathf.Abs(maxJumpForce)) {
 
 			float forceDiff = Mathf.Abs(maxJumpForce) - Mathf.Abs(currentJumpForce);
 			float forceToAdd = extraJumpForce;
-
+            
 			if(forceDiff < Mathf.Abs(extraJumpForce))
 			{
 				forceToAdd = forceDiff;
