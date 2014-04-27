@@ -111,8 +111,8 @@ GUIText:
   m_GameObject: {fileID: 5514204}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: 'Here you can find our system''s represention various obstacles you will
-    encounter in #LD29:'
+  m_Text: 'Here you can find our system''s represention of the various obstacles you
+    will encounter in #LD29:'
   m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
@@ -497,8 +497,8 @@ GUIText:
   m_GameObject: {fileID: 602463466}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: 'Due to the properties of dimension #LD29, we can only transmit a very basic
-    feed to our pilots.'
+  m_Text: 'Due to the unique properties of dimension #LD29, we can only transmit a
+    very basic feed to our pilots.'
   m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
