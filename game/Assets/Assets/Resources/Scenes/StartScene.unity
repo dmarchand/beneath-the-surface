@@ -112,7 +112,7 @@ GUIText:
   m_Enabled: 1
   serializedVersion: 3
   m_Text: 'Here you can find our system''s represention various obstacles you will
-    encounter in #LD49:'
+    encounter in #LD29:'
   m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
@@ -496,7 +496,7 @@ GUIText:
   m_GameObject: {fileID: 602463466}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: 'Due to the properties of dimension #LD49, we can only transmit a very basic
+  m_Text: 'Due to the properties of dimension #LD29, we can only transmit a very basic
     feed to our pilots.'
   m_Anchor: 4
   m_Alignment: 0
@@ -928,7 +928,7 @@ GUIText:
   m_GameObject: {fileID: 1442411467}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: 'Anomaly #LD49'
+  m_Text: 'Anomaly #LD29'
   m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
@@ -1484,7 +1484,7 @@ GUIText:
   m_Enabled: 1
   serializedVersion: 3
   m_Text: Our scientiests at L.D. Labs have discovered a new dimensional anomaly,
-    code named "#LD49".
+    code named "#LD29".
   m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
