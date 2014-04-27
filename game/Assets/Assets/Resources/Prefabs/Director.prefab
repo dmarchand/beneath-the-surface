@@ -77,6 +77,17 @@ MonoBehaviour:
   - {fileID: 100152, guid: 213b6666c4b49e742b404ce62acdfbbd, type: 2}
   - {fileID: 100148, guid: d7dee6f9b2c98154fa9dfb9c01b58e82, type: 2}
   - {fileID: 100148, guid: a2da002881ceb104fa86452491211667, type: 2}
+  - {fileID: 100060, guid: 422b2ae45670b034a96be211302f57a9, type: 2}
+  - {fileID: 100048, guid: 7dbaf4beecfada14cb850041ff026cce, type: 2}
+  - {fileID: 100048, guid: e62fda584f335b8439a169ce4c3de1fd, type: 2}
+  - {fileID: 100048, guid: 34f6f2d0ddc2e39419aa27006e4049cc, type: 2}
+  - {fileID: 100048, guid: d3e39690fcb3a4b4dac0feeeeb321128, type: 2}
+  - {fileID: 100142, guid: 4676921698e808f47a11c84c3b10ebb9, type: 2}
+  - {fileID: 100142, guid: 751786ec7a731c04fa0062579ca52a44, type: 2}
+  - {fileID: 100138, guid: 6993b7e43086eba4992383e07d685daf, type: 2}
+  - {fileID: 100138, guid: 5fe33cc16eebe9544a0df9af351c7a8b, type: 2}
+  - {fileID: 100136, guid: 1452ad5956aa5fa459a118e71eb0ae81, type: 2}
+  - {fileID: 100136, guid: 8b07241d44b46354ca4ad07693cceddb, type: 2}
   giftPrefabs:
   - {fileID: 100032, guid: 7ea45f197eef04df2a0a85bae50e73df, type: 2}
   - {fileID: 100032, guid: 63e8fc6ede9e4497cb8a66da417f3a44, type: 2}

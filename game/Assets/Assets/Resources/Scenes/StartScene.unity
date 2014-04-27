@@ -1613,7 +1613,7 @@ GUIText:
   m_Enabled: 1
   serializedVersion: 3
   m_Text: Our scientiests at L.D. Labs have discovered a new dimensional anomaly,
-    code named "#LD29".
+    code name "#LD29".
   m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
