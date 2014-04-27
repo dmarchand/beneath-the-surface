@@ -2,11 +2,14 @@
 using System.Collections;
 
 public class Syncer : MonoBehaviour {
-	
-	// Use this for initialization
-	void Start () {
-		
-	}
+
+    public GameObject Shockwave;
+
+    // Use this for initialization
+    void Start()
+    {
+        Shockwave = GameObject.Find("ShockwaveContainer").GetComponent<ParticleContainer>().ParticleEffect;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -33,7 +36,7 @@ public class Syncer : MonoBehaviour {
 		
 		otherPlayer.transform.position = new Vector2(basePlayerPos.x, otherPlayerPos.y);
 
-		
+        Instantiate(Shockwave, this.transform.position, Quaternion.identity);
 		Destroy(this.gameObject);
 	}
 }

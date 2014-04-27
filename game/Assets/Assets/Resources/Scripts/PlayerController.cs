@@ -5,14 +5,15 @@ public class PlayerController : MonoBehaviour {
 
 	public bool IsReflected;
 
-    public AudioSource Death;
+    AudioSource _death;
     float _timeElapsedBeforeSceneChange = 0f;
     float _sceneChangeDelay = 3f;
     bool _gameOver = false;
+    public GameObject ExplosionPrefab;
 
 	// Use this for initialization
 	void Start () {
-        Death = GameObject.Find("Explosion").GetComponent<AudioSource>();
+        _death = GameObject.Find("Explosion").GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -24,8 +25,7 @@ public class PlayerController : MonoBehaviour {
 		{
 			print ("Reflected char fell");
             Director.GameStats.DeathText = "Your drone exited the bounds of the dimensional anomaly!";
-            Death.Play();
-            _gameOver = true;
+            Die();
             
 		}
 
@@ -33,16 +33,14 @@ public class PlayerController : MonoBehaviour {
 		{
 			print ("Regular char fell");
             Director.GameStats.DeathText = "Your drone exited the bounds of the dimensional anomaly!";
-            Death.Play();
-            _gameOver = true;
+            Die();
 		}
 
 		if(this.transform.position.x < -15)
 		{
 			print ("Fell behind");
             Director.GameStats.DeathText = "Your drone exited the bounds of the dimensional anomaly!";
-            Death.Play();
-            _gameOver = true;
+            Die();
 		}
 	}
 
@@ -51,10 +49,16 @@ public class PlayerController : MonoBehaviour {
 		{
 			print ("Hit other player");
             Director.GameStats.DeathText = "Your drones collided, violating the dimensional anomaly's physical laws\n and caused it to collapse!";
-            Death.Play();
-            _gameOver = true;
+            Die();
 		}
 	}
+
+    void Die()
+    {
+        _death.Play();
+        Instantiate(ExplosionPrefab, this.transform.position, Quaternion.identity);
+        _gameOver = true;
+    }
 
     void CheckGameOver()
     {

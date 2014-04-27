@@ -3,10 +3,13 @@ using System.Collections;
 
 public class Swapper : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+    public GameObject Shockwave;
+
+    // Use this for initialization
+    void Start()
+    {
+        Shockwave = GameObject.Find("ShockwaveContainer").GetComponent<ParticleContainer>().ParticleEffect;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -35,7 +38,7 @@ public class Swapper : MonoBehaviour {
 		player.transform.position = new Vector2(otherPlayerPos.x, 0 - otherPlayerPos.y);
 
 
-
+        Instantiate(Shockwave, this.transform.position, Quaternion.identity);
 		Destroy(this.gameObject);
 	}
 }

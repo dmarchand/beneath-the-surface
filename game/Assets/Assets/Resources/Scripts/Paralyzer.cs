@@ -4,10 +4,11 @@ using System.Collections;
 public class Paralyzer : MonoBehaviour {
 
 	public float Duration;
+    public GameObject Shockwave;
 
 	// Use this for initialization
 	void Start () {
-	
+        Shockwave = GameObject.Find("ShockwaveContainer").GetComponent<ParticleContainer>().ParticleEffect;
 	}
 	
 	// Update is called once per frame
@@ -21,6 +22,7 @@ public class Paralyzer : MonoBehaviour {
 
 		if(player != null) {
 			player.Paralyze(Duration);
+            Instantiate(Shockwave, this.transform.position, Quaternion.identity);
 			Destroy(this.gameObject);
 		}
 	}
