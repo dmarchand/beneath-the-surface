@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour {
 		if(coll.gameObject.GetComponent<PlayerController>() != null && !_gameOver)
 		{
 			print ("Hit other player");
-            Director.GameStats.DeathText = "Your drones collided, violating the dimensional anomaly's physical laws\n and caused it to collapse!";
+            Director.GameStats.DeathText = "Your drones collided, violating the dimensional anomaly's physical laws\n and causing it to collapse!";
             Die();
 		}
 	}
