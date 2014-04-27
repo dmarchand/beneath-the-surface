@@ -4,11 +4,13 @@ using System.Collections;
 public class Syncer : MonoBehaviour {
 
     public GameObject Shockwave;
+    AudioSource _sound;
 
     // Use this for initialization
     void Start()
     {
         Shockwave = GameObject.Find("ShockwaveContainer").GetComponent<ParticleContainer>().ParticleEffect;
+        _sound = GameObject.Find("sync1").GetComponent<AudioSource>(); 
     }
 	
 	// Update is called once per frame
@@ -37,6 +39,7 @@ public class Syncer : MonoBehaviour {
 		otherPlayer.transform.position = new Vector2(basePlayerPos.x, otherPlayerPos.y);
 
         Instantiate(Shockwave, this.transform.position, Quaternion.identity);
+        _sound.Play();
 		Destroy(this.gameObject);
 	}
 }
