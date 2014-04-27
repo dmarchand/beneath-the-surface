@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour {
 			print ("Reflected char fell");
             Director.GameStats.DeathText = "Your drone exited the bounds of the dimensional anomaly!";
             Die();
-            
+            ReflectDeath();
 		}
 
 		if(!IsReflected && this.transform.position.y < -30)
@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour {
 			print ("Regular char fell");
             Director.GameStats.DeathText = "Your drone exited the bounds of the dimensional anomaly!";
             Die();
+            ReflectDeath();
 		}
 
 		if(this.transform.position.x < -15)
@@ -41,6 +42,8 @@ public class PlayerController : MonoBehaviour {
 			print ("Fell behind");
             Director.GameStats.DeathText = "Your drone exited the bounds of the dimensional anomaly!";
             Die();
+            ReflectDeath();
+            
 		}
 	}
 
@@ -53,7 +56,22 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-    void Die()
+    void ReflectDeath()
+    {
+        PlayerController otherPlayer;
+        if (IsReflected)
+        {
+            otherPlayer = GameObject.Find("NormalPlayer").GetComponent<PlayerController>();
+        }
+        else
+        {
+            otherPlayer = GameObject.Find("ReflectedPlayer").GetComponent<PlayerController>();
+        }
+
+        otherPlayer.Die();
+    }
+
+    public void Die()
     {
         _death.Play();
         Instantiate(ExplosionPrefab, this.transform.position, Quaternion.identity);
