@@ -1,4 +1,4 @@
 beneath-the-surface
 ===================
 
-how mysterious
+Quick game prototype made for Ludum Dare #29
